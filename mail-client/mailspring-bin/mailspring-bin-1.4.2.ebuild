@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -14,6 +14,8 @@ SRC_URI="https://github.com/Foundry376/Mailspring/releases/download/${PV}/mailsp
 LICENSE="GPL-3 mailsync"
 SLOT="0"
 KEYWORDS="~amd64"
+
+QA_PREBUILT="*"
 
 RDEPEND="
 	dev-libs/libappindicator:3

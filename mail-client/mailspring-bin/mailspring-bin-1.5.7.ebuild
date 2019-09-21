@@ -15,6 +15,8 @@ LICENSE="GPL-3 mailsync"
 SLOT="0"
 KEYWORDS="~amd64"
 
+QA_PREBUILT="*"
+
 RDEPEND="
 	dev-libs/libappindicator:3
 	gnome-extra/zenity
