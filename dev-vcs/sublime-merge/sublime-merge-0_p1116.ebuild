@@ -18,7 +18,6 @@ SRC_URI="
 LICENSE="SublimeMerge-EULA"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="dbus"
 RESTRICT="bindist mirror strip"
 
 RDEPEND="
