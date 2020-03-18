@@ -1,0 +1,29 @@
+# Copyright 1999-2020 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+
+inherit rpm
+
+RPM_REL="1"
+
+DESCRIPTION="Microsoft Teams collaboration software"
+HOMEPAGE="https://teams.microsoft.com/download"
+SRC_URI="https://packages.microsoft.com/yumrepos/ms-teams/teams-${PV}-${RPM_REL}.x86_64.rpm"
+
+LICENSE="MSSA"
+SLOT="0"
+KEYWORDS="~amd64"
+
+QA_PREBUILT="*"
+
+RDEPEND="
+	dev-libs/libappindicator:3
+"
+
+S="${WORKDIR}"
+
+src_install() {
+	dodir /usr
+	cp -R "${S}/usr" "${D}" || die "Install failed!"
+}
